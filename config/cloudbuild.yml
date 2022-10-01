@@ -1,0 +1,10 @@
+steps:
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      - build
+      - "--tag=gcr.io/[USE_PROJECT_ID]/cloud-run-jobs-node-date:latest"
+      - "--file=config/Dockerfile"
+      - .
+
+images:
+  - "gcr.io/[USE_PROJECT_ID]/cloud-run-jobs-node-date:latest"
